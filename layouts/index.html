@@ -103,6 +103,12 @@
     </div>
   </section>
 
+    {{ $events := hugo.Data.events }}
+    <div class="map-canvas{{ range $events }} map-country-{{ .country }}-{{ .status }}{{ end }}">
+      {{ readFile "static/img/europe-map.svg" | safeHTML }}
+    </div>
+  </section>
+
   <!-- ABOUT US SECTION ("o nás") -->
   <section class="section section-about" id="o-nas">
     <div class="section-header">

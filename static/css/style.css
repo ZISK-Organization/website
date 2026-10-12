@@ -662,6 +662,102 @@ img {
   transform: scale(1.05);
 }
 
+/* ==========================================================================
+   TRAVEL MAP
+   ========================================================================== */
+.map-legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 24px auto 0;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.map-swatch {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border: 2px solid var(--primary-color);
+  border-radius: 3px;
+}
+
+.map-swatch-yellow {
+  background-color: var(--status-yellow);
+}
+
+.map-swatch-green {
+  background-color: var(--status-green);
+}
+
+.map-swatch-blue {
+  background-color: var(--status-blue);
+}
+
+.map-canvas {
+  max-width: 1100px;
+  margin: 28px auto 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.map-canvas svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.map-canvas .country {
+  fill: transparent;
+  stroke: var(--primary-color);
+  stroke-width: 1.8;
+  stroke-linejoin: round;
+  transition: fill var(--transition-fast);
+}
+
+.map-canvas[class~="map-country-ma-yellow"] .country-ma,
+.map-canvas[class~="map-country-fi-yellow"] .country-fi,
+.map-canvas[class~="map-country-bg-yellow"] .country-bg,
+.map-canvas[class~="map-country-pl-yellow"] .country-pl,
+.map-canvas[class~="map-country-sk-yellow"] .country-sk,
+.map-canvas[class~="map-country-se-yellow"] .country-se,
+.map-canvas[class~="map-country-it-yellow"] .country-it,
+.map-canvas[class~="map-country-cz-yellow"] .country-cz,
+.map-canvas[class~="map-country-no-yellow"] .country-no,
+.map-canvas[class~="map-country-hu-yellow"] .country-hu,
+.map-canvas[class~="map-country-de-yellow"] .country-de {
+  fill: var(--status-yellow);
+}
+
+.map-canvas[class~="map-country-ma-blue"] .country-ma,
+.map-canvas[class~="map-country-fi-blue"] .country-fi,
+.map-canvas[class~="map-country-bg-blue"] .country-bg,
+.map-canvas[class~="map-country-pl-blue"] .country-pl,
+.map-canvas[class~="map-country-sk-blue"] .country-sk,
+.map-canvas[class~="map-country-se-blue"] .country-se,
+.map-canvas[class~="map-country-it-blue"] .country-it,
+.map-canvas[class~="map-country-cz-blue"] .country-cz,
+.map-canvas[class~="map-country-no-blue"] .country-no,
+.map-canvas[class~="map-country-hu-blue"] .country-hu,
+.map-canvas[class~="map-country-de-blue"] .country-de {
+  fill: var(--status-blue);
+}
+
+.map-canvas[class~="map-country-ma-green"] .country-ma,
+.map-canvas[class~="map-country-fi-green"] .country-fi,
+.map-canvas[class~="map-country-bg-green"] .country-bg,
+.map-canvas[class~="map-country-pl-green"] .country-pl,
+.map-canvas[class~="map-country-sk-green"] .country-sk,
+.map-canvas[class~="map-country-se-green"] .country-se,
+.map-canvas[class~="map-country-it-green"] .country-it,
+.map-canvas[class~="map-country-cz-green"] .country-cz,
+.map-canvas[class~="map-country-no-green"] .country-no,
+.map-canvas[class~="map-country-hu-green"] .country-hu,
+.map-canvas[class~="map-country-de-green"] .country-de {
+  fill: var(--status-green);
+}
+
 .preview-desc {
   font-size: 0.92rem;
   color: #374151;

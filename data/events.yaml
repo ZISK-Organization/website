@@ -1,4 +1,5 @@
 - title: "Maroko 2027"
+  country: "ma"
   date: "Jaro 2027"
   status: "yellow"
   status_label: "Plánováno"
@@ -7,6 +8,7 @@
   photo: "/img/events/marocco.jpg"
 
 - title: "Finsko 2026"
+  country: "fi"
   date: "Říjen 2026"
   status: "green"
   status_label: "Probíhá"
@@ -15,6 +17,7 @@
   photo: "/img/events/finsko.jpg"
 
 - title: "Bulharsko 2026"
+  country: "bg"
   date: "Květen 2026"
   status: "blue"
   status_label: "Proběhlo"
@@ -23,6 +26,7 @@
   photo: "/img/events/bulharsko.jpg"
 
 - title: "Polsko 2025"
+  country: "pl"
   date: "Listopad 2025"
   status: "blue"
   status_label: "Proběhlo"
@@ -31,6 +35,7 @@
   photo: "/img/events/polsko.jpg"
 
 - title: "Slovensko 2025"
+  country: "sk"
   date: " Červenec 2025"
   status: "blue"
   status_label: "Proběhlo"
@@ -39,6 +44,7 @@
   photo: "/img/events/hrad.jpg"
 
 - title: "Švédsko 2025"
+  country: "se"
   date: "Duben 2025"
   status: "blue"
   status_label: "Proběhlo"
@@ -47,6 +53,7 @@
   photo: "/img/events/strom.jpg"
 
 - title: "Itálie 2024"
+  country: "it"
   date: "Listopad 2024"
   status: "blue"
   status_label: "Proběhlo"
@@ -55,6 +62,7 @@
   photo: "/img/events/mleko.jpg"
 
 - title: "Slovensko 2024"
+  country: "sk"
   date: "Červenec 2024"
   status: "blue"
   status_label: "Proběhlo"
@@ -63,6 +71,7 @@
   photo: "/img/events/vafle.jpg"
 
 - title: "Česko 2024"
+  country: "cz"
   date: "Duben 2024"
   status: "blue"
   status_label: "Proběhlo"
@@ -71,6 +80,7 @@
   photo: "/img/events/cizov.jpg"
 
 - title: "Norsko 2023"
+  country: "no"
   date: "Listopad 2023"
   status: "blue"
   status_label: "Proběhlo"
@@ -79,6 +89,7 @@
   photo: "/img/events/norsko.jpg"
 
 - title: "Maďarsko 2023"
+  country: "hu"
   date: "Březen 2023"
   status: "blue"
   status_label: "Proběhlo"
@@ -87,6 +98,7 @@
   photo: "/img/events/bdsm.jpg"
 
 - title: "Německo 2022"
+  country: "de"
   date: "Říjen 2022"
   status: "blue"
   status_label: "Proběhlo"
@@ -95,6 +107,7 @@
   photo: "/img/events/nemci.png"
 
 - title: "Česko 2022"
+  country: "cz"
   date: "Březen 2022"
   status: "blue"
   status_label: "Proběhlo"
