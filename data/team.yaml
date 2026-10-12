@@ -25,8 +25,8 @@
 - name: "Ondřej Chwiedziuk"
   role: "Organizátor & Web"
   motto: "Informatika je jen aplikovaná algebra"
-  about: "Jsem student MFF UK, oboru Matematika pro IT. Ačkoli se chci věnovat informatice, stále jsem srdcem matematik. Mezi mé další koníčky patří historie, cestování a vaření."
-  photo: "/img/Team/ChwidOndra.jpg"
+  about: "Jsem doktorand na katedře algebry MFF UK. Zajímám se především o enumerativní kombinatoriku, teorii reprezentací a algebraickou geometrii. Věnuji se také i programování. Kromě toho rád cestuji a vařím na akcích."
+  photo: "/img/Team/ChwOndra.png"
   email: "chwiedziuk@matfyz.cz"
   github: "https://github.com/ondrachwiedziuk"
 
