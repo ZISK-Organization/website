@@ -77,7 +77,9 @@
             <span class="timeline-dot dot-{{ $event.status }}"></span>
           </div>
 
-          <div class="timeline-card">
+          <input type="checkbox" id="timeline-event-{{ $index }}" class="timeline-toggle">
+          <label for="timeline-event-{{ $index }}" class="timeline-card-toggle">
+            <div class="timeline-card">
               <div class="timeline-meta">
                 <span class="badge badge-{{ $event.status }}">{{ $event.status_label }}</span>
                 <span class="timeline-date">{{ $event.date }}</span>
@@ -94,7 +96,8 @@
                   <p class="preview-desc">{{ $event.short_desc }}</p>
                 </div>
               </div>
-          </div>
+            </div>
+          </label>
         </div>
       {{ end }}
     </div>

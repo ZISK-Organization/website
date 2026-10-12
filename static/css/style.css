@@ -498,6 +498,22 @@ img {
 }
 
 /* Timeline Card */
+.timeline-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.timeline-card-toggle {
+  display: block;
+  cursor: pointer;
+}
+
+.timeline-toggle:focus-visible + .timeline-card-toggle .timeline-card {
+  outline: 3px solid var(--border-focus);
+  outline-offset: 3px;
+}
+
 .timeline-card {
   background-color: #ffffff;
   border: 1px solid var(--border-color);
@@ -515,6 +531,16 @@ img {
 }
 
 .timeline-card:hover .timeline-event-name {
+  color: var(--primary-color);
+}
+
+.timeline-toggle:checked + .timeline-card-toggle .timeline-card {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-color);
+}
+
+.timeline-toggle:checked + .timeline-card-toggle .timeline-event-name {
   color: var(--primary-color);
 }
 
@@ -603,7 +629,7 @@ img {
 
 /* On hover of the card or item, the preview smoothly expands */
 .timeline-card:hover .timeline-hover-preview,
-.timeline-card:focus .timeline-hover-preview {
+.timeline-toggle:checked + .timeline-card-toggle .timeline-hover-preview {
   max-height: 400px;
   opacity: 1;
   transform: translateY(0);
@@ -629,6 +655,10 @@ img {
 }
 
 .timeline-card:hover .preview-img {
+  transform: scale(1.05);
+}
+
+.timeline-toggle:checked + .timeline-card-toggle .preview-img {
   transform: scale(1.05);
 }
 
