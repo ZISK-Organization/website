@@ -1,0 +1,43 @@
+{{ define "header" }}
+<!-- Fixed / Standard Header for Subpages -->
+<header class="subpage-header">
+  <div class="nav-container">
+    <a href="/" class="nav-brand">
+      <img src="/img/logo.svg" alt="ZISK" class="nav-logo">
+      <span class="nav-brand-text">ZISK</span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Přepnout navigaci">
+    <label for="nav-toggle" class="nav-hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <div class="nav-links">
+      <a href="/#casova-osa" class="nav-link">časová osa</a>
+      <a href="/#o-nas" class="nav-link">o nás</a>
+      <a href="{{ .Site.Params.discord_url }}" class="nav-link nav-link-highlight" target="_blank" rel="noopener">discord</a>
+      <a href="/seminar/#/Memes" class="nav-link">memes</a>
+      <a href="https://seminar.zisk-go.com/" class="nav-link nav-link-seminar {{ if eq .Section "seminar" }}active{{ end }}">seminář</a>
+    </div>
+  </div>
+</header>
+{{ end }}
+
+{{ define "main" }}
+<div class="page-container">
+  <article class="standard-page">
+    <header class="page-head">
+      <h1 class="page-title">{{ .Title }}</h1>
+      {{ with .Description }}
+      <p class="page-lead">{{ . }}</p>
+      {{ end }}
+    </header>
+
+    <div class="page-content">
+      {{ .Content }}
+    </div>
+  </article>
+</div>
+{{ end }}

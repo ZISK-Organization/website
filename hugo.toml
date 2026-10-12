@@ -1,0 +1,8 @@
+baseURL = 'https://zisk-go.com/'
+title = 'ZISK | Zájezdovo-Informatická Studentská Kancelář'
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  brand = 'ZISK'
+  description = 'ZISK se posouvá od univerzitní soutěže k nezapomenutelným zážitkovým akcím spojeným s cestováním po Evropě. Spojujeme informatické myšlení, dobrodružství a přátelství.'
+  discord_url = 'https://discord.com/invite/Jpb9vw3hFv'

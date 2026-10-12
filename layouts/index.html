@@ -1,0 +1,175 @@
+{{ define "main" }}
+<!-- Landing Hero Screen -->
+<div class="hero-screen">
+  <div class="hero-content">
+    <div class="hero-logo-wrap">
+      <img src="/img/logo_large.svg" alt="Zájezdovo-Informatická Studentská Kancelář" class="hero-logo">
+    </div>
+    <h1 class="hero-title">Zájezdovo-Informatická Studentská Kancelář</h1>
+  </div>
+</div>
+
+<!-- Fixed Navigation Bar -->
+<nav class="sticky-nav" id="main-nav">
+  <div class="nav-container">
+    <a href="#" class="nav-brand">
+      <img src="/img/logo.svg" alt="ZISK" class="nav-logo">
+      <span class="nav-brand-text">ZISK</span>
+    </a>
+
+    <!-- Pure CSS Hamburger Toggle (No JS) -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Přepnout navigaci">
+    <label for="nav-toggle" class="nav-hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <div class="nav-links">
+      <a href="#casova-osa" class="nav-link">časová osa</a>
+      <a href="#o-nas" class="nav-link">o nás</a>
+      <a href="{{ .Site.Params.discord_url }}" class="nav-link nav-link-highlight" target="_blank" rel="noopener">discord</a>
+      <a href="/seminar/#/Memes" class="nav-link">memes</a>
+      <a href="https://seminar.zisk-go.com/" class="nav-link nav-link-seminar">seminář</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Content Sections -->
+<div class="content-wrapper">
+  
+  <!-- TIMELINE SECTION ("časová osa") -->
+  <section class="section section-timeline" id="casova-osa">
+    <div class="section-header">
+      <h2 class="section-title">Časová osa</h2>
+
+      <!-- Legend for dots -->
+      <div class="timeline-legend">
+        <div class="legend-item">
+          <span class="dot-sample dot-yellow"></span>
+          <span>Plánuje se</span>
+        </div>
+        <div class="legend-item">
+          <span class="dot-sample dot-green"></span>
+          <span>Probíhá</span>
+        </div>
+        <div class="legend-item">
+          <span class="dot-sample dot-blue"></span>
+          <span>Již proběhlo</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vertical Timeline with dark red central line -->
+    <div class="timeline-container">
+      <div class="timeline-spine"></div>
+
+      {{ $events := hugo.Data.events }}
+      {{ range $index, $event := $events }}
+        {{ $sideClass := "timeline-item-right" }}
+        {{ if (modBool $index 2) }}
+          {{ $sideClass = "timeline-item-left" }}
+        {{ end }}
+
+        <div class="timeline-item {{ $sideClass }} status-{{ $event.status }}">
+          <!-- Node Dot on dark red line with white circle around it -->
+          <div class="timeline-node">
+            <span class="timeline-dot dot-{{ $event.status }}"></span>
+          </div>
+
+          <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="badge badge-{{ $event.status }}">{{ $event.status_label }}</span>
+                <span class="timeline-date">{{ $event.date }}</span>
+              </div>
+              <h3 class="timeline-event-name">{{ $event.title }}</h3>
+              <p class="timeline-location">📍 {{ $event.location }}</p>
+
+              <!-- Hover popup / preview details that appear on hover (Pure CSS) -->
+              <div class="timeline-hover-preview">
+                <div class="preview-img-wrap">
+                  <img src="{{ $event.photo }}" alt="{{ $event.title }}" class="preview-img" loading="lazy">
+                </div>
+                <div class="preview-content">
+                  <p class="preview-desc">{{ $event.short_desc }}</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- ABOUT US SECTION ("o nás") -->
+  <section class="section section-about" id="o-nas">
+    <div class="section-header">
+      <h2 class="section-title">O nás</h2>
+    </div>
+
+    <div class="about-manifesto">
+      <div class="manifesto-card">
+        <div class="manifesto-icon">🧭</div>
+        <h3>Od algoritmů k cestám</h3>
+        <p>
+          Původní <strong>Zábavné Informatické SuperKlání</strong> vzniklo jako prostor pro řešení netriviálních informatických a logických úloh. Rychle se však ukázalo, že nejcennější momenty vznikaly mimo obrazovky – na víkendovkách během poznávání cizích zemí, punkového programu a trollení orgů i účastníků.
+        </p>
+      </div>
+
+      <div class="manifesto-card">
+        <div class="manifesto-icon">🌍</div>
+        <h3>Zájezdovo-Informatická Studentská Kancelář</h3>
+        <p>
+          Proto jsme se rozhodli posunout ZISK na novou úroveň. Nechceme již vytvářet akademickou soutěž, ale <strong>zážitkové akce a cestovat (nejen) po Evropě</strong>. Cestujeme autem, letadlem i vlakem, propojujeme koncept soustředění pro středoškoláky s poznáváním nových míst a bereme se méně vážně.
+        </p>
+      </div>
+
+      <div class="manifesto-card">
+        <div class="manifesto-icon">💻</div>
+        <h3>Co se stalo se starým seminářem?</h3>
+        <p>
+          Starý korespondenční seminář a jeho výplatní období nezmizely nadobro! Jsou archivovány a k dispozici v sekci <a href="https://seminar.zisk-go.com/"><strong>Seminář</strong></a>. Zde najdete minulé ročníky, úlohy i zadání pro ty, kteří si chtějí procvičit své mozkové závity, avšak už bez výplaty.
+        </p>
+      </div>
+    </div>
+
+    <!-- Organizers Block -->
+    <div class="organizers-section">
+      <h3 class="organizers-heading">Organizační tým</h3>
+
+      <div class="team-grid">
+        {{ range hugo.Data.team }}
+        <div class="team-card">
+          <div class="team-photo-wrap">
+            <img src="{{ .photo }}" alt="{{ .name }}" class="team-photo" loading="lazy">
+          </div>
+          <div class="team-info">
+            <h4 class="team-name">{{ .name }}</h4>
+            <blockquote class="team-motto">„{{ .motto }}“</blockquote>
+            <p class="team-bio">{{ .about }}</p>
+            <div class="team-links">
+              {{ with .email }}
+              <a href="mailto:{{ . }}" class="team-link" title="Napsat email">
+                <svg class="mail-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm0 2v.5l9 5.5 9-5.5V7H3zm18 10V9.83l-8.48 5.18a1 1 0 0 1-1.04 0L3 9.83V17h18z"/>
+                </svg>
+                <span>{{ . }}</span>
+              </a>
+              {{ end }}
+              {{ with .github }}
+              <a href="{{ . }}" target="_blank" rel="noopener" class="team-link" title="GitHub profil">
+                <svg class="github-icon" viewBox="0 0 16 16" aria-hidden="true">
+                  <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+                <span>GitHub</span>
+              </a>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+</div>
+{{ end }}
