@@ -45,7 +45,7 @@
       <!-- Legend for dots -->
       <div class="timeline-legend">
         <div class="legend-item">
-          <span class="dot-sample dot-yellow"></span>
+          <span class="dot-sample dot-blue"></span>
           <span>Plánuje se</span>
         </div>
         <div class="legend-item">
@@ -53,7 +53,7 @@
           <span>Probíhá</span>
         </div>
         <div class="legend-item">
-          <span class="dot-sample dot-blue"></span>
+          <span class="dot-sample dot-yellow"></span>
           <span>Již proběhlo</span>
         </div>
       </div>
@@ -100,9 +100,7 @@
         </div>
       {{ end }}
     </div>
-  </section>
 
-    {{ $events := hugo.Data.events }}
     <div class="map-canvas{{ range $events }} map-country-{{ .country }}-{{ .status }}{{ end }}">
       {{ readFile "static/img/europe-map.svg" | safeHTML }}
     </div>

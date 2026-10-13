@@ -22,7 +22,7 @@
   --border-focus: #8b1e22;
 
   /* Status Colors */
-  --status-yellow: #eab308;       /* Distant future - not able to register */
+  --status-yellow: #eab308;       /* Already happened */
   --status-yellow-bg: #fef9c3;
   --status-yellow-text: #854d0e;
 
@@ -30,7 +30,7 @@
   --status-green-bg: #dcfce7;
   --status-green-text: #14532d;
 
-  --status-blue: #2563eb;         /* Already happened */
+  --status-blue: #2563eb;         /* Planned */
   --status-blue-bg: #dbeafe;
   --status-blue-text: #1e3a8a;
 
@@ -711,7 +711,7 @@ img {
 .map-canvas .country {
   fill: transparent;
   stroke: var(--primary-color);
-  stroke-width: 1.8;
+  stroke-width: 2.4;
   stroke-linejoin: round;
   transition: fill var(--transition-fast);
 }
