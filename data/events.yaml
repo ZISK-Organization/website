@@ -10,10 +10,10 @@
 - title: "Finsko 2026"
   country: "fi"
   date: "Říjen 2026"
-  status: "green"
-  status_label: "Probíhá"
+  status: "yellow"
+  status_label: "Proběhlo"
   location: "Forssa, Finsko"
-  short_desc: "TBD."
+  short_desc: "První den jsme se vydali do Helsinek, kde jsme navštívili vojenský ostrov Suomenlinna. Druhý den jsme se přesunuli do Tampere, kde jsme navštívili univerzitu a atomový kryt. Poté jsme bojovali se Skandinávskou plísní, navštívili muzeum textilu, potkali hodně Jacků a ochutnali Surströmming."
   photo: "/img/events/finsko.jpg"
 
 - title: "Bulharsko 2026"
@@ -22,7 +22,7 @@
   status: "yellow"
   status_label: "Proběhlo"
   location: "Balchik, Bulharsko"
-  short_desc: "TBD."
+  short_desc: "Pobývali jsme ve ville kousek od moře, kde jsme se však příliš nekoupali kvůli počasí. Místo toho jsme testovali šifry na Aquacoin, pořádali volby, v nichž těsně zvítězil Zlobimír Užborbón, čarovali a vařili rýži v pračce. Na závěr jsme se vykoupali v moři ve Varně a dali si luxusní oběd."
   photo: "/img/events/bulharsko.jpg"
 
 - title: "Polsko 2025"
@@ -40,7 +40,7 @@
   status: "yellow"
   status_label: "Proběhlo"
   location: "Sklené Teplice, Slovensko"
-  short_desc: "TBD."
+  short_desc: "Během víkendovky jsme se vydali do Sklených Teplic, kde jsme řešili šifrovačku, navštívili jsme baně, pohlédli si výrobu sýra, kde jsme ochutnali místní sýry a také jsme si užili koupání v termálních lázních. Dále jsme se vydali na výlet do Banské Štiavnice, kde jsme si prohlédli město a jeho okolí."
   photo: "/img/events/hrad.jpg"
 
 - title: "Švédsko 2025"
@@ -49,7 +49,7 @@
   status: "yellow"
   status_label: "Proběhlo"
   location: "Nordkroken, Švédsko"
-  short_desc: "TBD."
+  short_desc: "Na počátku cesty jsme navštívili Göteborg, kde jsme si prohlédli město. Následně jsme se přesunuli do Nordkrokenu, kde jsme bydleli v chatě u jezera. Během pobytu jsme dělali slalom v lodičkách, pájeli jsme detektor kovů, vyrazili k vodopádu a snědli fakt hodně lékořice."
   photo: "/img/events/strom.jpg"
 
 - title: "Itálie 2024"
@@ -67,7 +67,7 @@
   status: "yellow"
   status_label: "Proběhlo"
   location: "Dedinky, Slovensko"
-  short_desc: "TBD."
+  short_desc: "Tato víkendovka byla postavená na principu orgování naruby. Tedy organizátoři ZISKu se stali účastníky a program pro ně připravili účastníci. Během pobytu jsme připravovali vafle tenisovou raketou, měli jsme výsadek v lese a navštívili Košice i Tatry. Také jsme si užili šifrovačku po Slovenském ráji a dali si vodní bitvu."
   photo: "/img/events/vafle.jpg"
 
 - title: "Česko 2024"
@@ -76,7 +76,7 @@
   status: "yellow"
   status_label: "Proběhlo"
   location: "Čížov, Česko"
-  short_desc: "TBD."
+  short_desc: "Během víkendovky jsme se vydali do Čížova, kde jsme opravovali vesmírnou loď, bojovali s meči na poli, grillovali a měli jsme účastnické přednášky. Nakonec jsme se vydali na výlet do Národního parku Podyjí, kde jsme si užili krásnou přírodu a výhledy."
   photo: "/img/events/cizov.jpg"
 
 - title: "Norsko 2023"
@@ -85,7 +85,7 @@
   status: "yellow"
   status_label: "Proběhlo"
   location: "Trondheim, Norsko"
-  short_desc: "TBD."
+  short_desc: "Během víkendovky jsme se vydali do Norska, kde jsme navštívili Trondheim a jeho univerzitu. Dále jsme se vydali na výlet do hor, kde jsme si užili krásné výhledy a přírodu. Během pobytu jsme také hráli různé hru na poznání Trondheimu, noční šifrovací hru a krátkou běhačku s tematikou boje o topenáře."
   photo: "/img/events/norsko.jpg"
 
 - title: "Maďarsko 2023"
@@ -94,7 +94,7 @@
   status: "yellow"
   status_label: "Proběhlo"
   location: "Rajka, Maďarsko"
-  short_desc: "TBD."
+  short_desc: "V průběhu celé akce jsme vařili z chilli, přičemž se účastníci přesouvali mezi objekty, podle toho, kde se zrovna vařilo. Během noční hry jsme navštívili trojmezí Maďarska, Slovenska a Rakouska. Na závěr jsme se vydali do Budapešti, kde jsme si prohlédli město a obdivovali místní toalety."
   photo: "/img/events/bdsm.jpg"
 
 - title: "Německo 2022"
@@ -103,7 +103,7 @@
   status: "yellow"
   status_label: "Proběhlo"
   location: "Mnichov, Německo"
-  short_desc: "TBD."
+  short_desc: "Druhou víkendovku jsme započali v Plzni, kde jsme zahájili program velkou spoustou přednášek. Hned druhý den ráno jsme se vydali do německého Mnichova, kde jsme kromě prohlídky města stihli během noční hry zabránit ochrance, která nám násilně narvala špunty do uší. Celou akci jsme zakončili strategickým soubojem o Poštovní planetu."
   photo: "/img/events/nemci.png"
 
 - title: "Česko 2022"
