@@ -77,7 +77,7 @@
           </div>
 
           <input type="checkbox" id="timeline-event-{{ $index }}" class="timeline-toggle">
-          <label for="timeline-event-{{ $index }}" class="timeline-card-toggle">
+          <label for="timeline-event-{{ $index }}" class="timeline-card-toggle" data-country="{{ $event.country }}" tabindex="-1">
             <div class="timeline-card">
               <div class="timeline-meta">
                 <span class="badge badge-{{ $event.status }}">{{ $event.status_label }}</span>
@@ -172,6 +172,40 @@
             </div>
           </div>
         </div>
+
+        <script>
+          document.querySelectorAll('.map-canvas .country').forEach(function (country) {
+            var countryCode = country.className.baseVal.replace('country country-', '');
+            var statusClasses = Array.from(country.closest('.map-canvas').classList);
+            var statusClass = statusClasses.find(function (className) {
+              return className.indexOf('map-country-' + countryCode + '-') === 0;
+            });
+
+            if (!statusClass) {
+              return;
+            }
+
+            country.classList.add('country-active');
+
+            country.addEventListener('click', function () {
+              var eventCard = document.querySelector('.timeline-card-toggle[data-country="' + countryCode + '"]');
+              if (!eventCard) {
+                return;
+              }
+
+              var eventToggle = document.getElementById(eventCard.htmlFor);
+              if (eventToggle) {
+                eventToggle.checked = true;
+              }
+
+              requestAnimationFrame(function () {
+                var targetTop = eventCard.getBoundingClientRect().top + window.scrollY - 80;
+                window.scrollTo({ top: targetTop, behavior: 'smooth' });
+                eventCard.focus({ preventScroll: true });
+              });
+            });
+          });
+        </script>
         {{ end }}
       </div>
     </div>
