@@ -10,11 +10,11 @@
 - title: "Finsko 2026"
   country: "fi"
   date: "Říjen 2026"
-  status: "green"
-  status_label: "Probíhá"
+  status: "yellow"
+  status_label: "Proběhlo"
   location: "Forssa, Finsko"
   short_desc: "První den jsme se vydali do Helsinek, kde jsme navštívili vojenský ostrov Suomenlinna. Druhý den jsme se přesunuli do Tampere, kde jsme navštívili univerzitu a atomový kryt. Poté jsme bojovali se Skandinávskou plísní, navštívili muzeum textilu, potkali hodně Jacků a ochutnali Surströmming."
-  photo: "/img/events/finsko.jpg"
+  photo: "/img/events/julinka.jpg"
 
 - title: "Bulharsko 2026"
   country: "bg"
@@ -50,7 +50,7 @@
   status_label: "Proběhlo"
   location: "Nordkroken, Švédsko"
   short_desc: "Na počátku cesty jsme navštívili Göteborg, kde jsme si prohlédli město. Následně jsme se přesunuli do Nordkrokenu, kde jsme bydleli v chatě u jezera. Během pobytu jsme dělali slalom v lodičkách, pájeli jsme detektor kovů, vyrazili k vodopádu a snědli fakt hodně lékořice."
-  photo: "/img/events/strom.jpg"
+  photo: "/img/events/lod.jpg"
 
 - title: "Itálie 2024"
   country: "it"
